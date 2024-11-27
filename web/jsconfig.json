@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "baseUrl": "e:/homework/大四实践/web/src",
+    "moduleResolution": "node",
+    "paths": {
+      "@/*": ["components/*"]
+    },
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+  }
+}
