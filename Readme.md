@@ -97,6 +97,7 @@
     - transformers==4.45.2
  - [node.js](https://nodejs.org/en)
  - vue/cli
+
 ### 安装步骤
 
 1.克隆项目到本地
@@ -141,9 +142,13 @@ npm run serve
 欢迎贡献！如果你有好的想法或者想改进该项目，请按照以下步骤进行：
 
 1.Fork 本仓库
+
 2.创建自己的分支 (git checkout -b feature-branch)
+
 3.提交更改 (git commit -am 'Add new feature')
+
 4.推送到分支 (git push origin feature-branch)
+
 5.提交 Pull Request
 
 ## 许可证
