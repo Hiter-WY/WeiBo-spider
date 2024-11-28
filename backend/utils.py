@@ -215,7 +215,7 @@ def user_portrait(keyword):
     data = return_userinfo(name, 3)
     cleaned_texts = [entry['cleaned_text'] for entry in data]
     client = OpenAI(
-        api_key="sk-6GKmdaNAI7dczeXksnMufGYfMibfB7p4ee3HwUZZC6Lt5llT",
+        api_key="your Kimi api key",
         # 在这里将 MOONSHOT_API_KEY 替换为你从 Kimi 开放平台申请的 API Key
         base_url="https://api.moonshot.cn/v1",
     )
