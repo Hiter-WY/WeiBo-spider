@@ -189,7 +189,7 @@ def get_retransmission(mid):
     for i in range(1, 5):
         url = f"https://m.weibo.cn/api/statuses/repostTimeline?id={mid}&page={i}"
         headers = {
-            'Cookie': "_T_WM=75737958090; WEIBOCN_FROM=1110006030; SCF=Ao0NxX59IbpL755IZCgNRVQfjXChR2DKWxJbTrETjz5NvBG2sR915poq2VeGpufKBH-bmEh_lbyos0y1XC_pinI.; SUB=_2A25KQuqWDeRhGeFI6VQU9izFyz-IHXVpPmJerDV6PUJbktAGLU3dkW1NfS3fPFl3EgNTR4Pb1bsTCl0_zA58RsXR; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9WhCapvxyYGNqnj0l3x-yEkQ5NHD95QNSozcSKqE1K50Ws4Dqcj_i--fi-88iKL2i--4i-i8iK.4i--fi-zpi-zpi--fi-zpi-zpi--Ni-2fiKL8; SSOLoginState=1732680391; ALF=1735272391; MLOGIN=1; XSRF-TOKEN=4cf581; mweibo_short_token=2611e8eada; M_WEIBOCN_PARAMS=oid%3D5105383402113788%26luicode%3D20000061%26lfid%3D5105383402113788%26uicode%3D20000174"
+            'Cookie': "choose your cookie"
         }
         res = requests.get(url=url, headers=headers)
         if res.status_code == 200:
@@ -215,7 +215,7 @@ def user_portrait(keyword):
     data = return_userinfo(name, 3)
     cleaned_texts = [entry['cleaned_text'] for entry in data]
     client = OpenAI(
-        api_key="your Kimi api key",
+        api_key="your Kimi api",
         # 在这里将 MOONSHOT_API_KEY 替换为你从 Kimi 开放平台申请的 API Key
         base_url="https://api.moonshot.cn/v1",
     )
