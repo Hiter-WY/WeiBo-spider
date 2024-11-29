@@ -128,9 +128,11 @@ npm install -g @vue/cli
 
 kimi的api配置可以参考[Moonshot AI](https://platform.moonshot.cn/docs/guide/start-using-kimi-api)
 
-2.启动后端，使用你常用的python编辑器，运行app.py，flask框架的默认端口是5000，请确保不会出现端口冲突。
+2.模型的下载地址：[百度网盘](https://pan.baidu.com/s/1mdYRC5PZPXa_4c2UgsRc3w) ，将模型下载到本地后，在BertClassifier-master文件夹建立models文件夹，将模型与json放入文件夹中，更改BertClassifier-master/predict.py中的模型路径。
 
-3.启动项目前端
+3.启动后端：使用你常用的python编辑器，修改模型路径为你自己的路径，运行app.py，flask框架的默认端口是5000，请确保不会出现端口冲突。
+
+4.启动项目前端
 ```bash
 cd ./web
 npm install #如果报错添加sudo，可能会出现读写权限问题
