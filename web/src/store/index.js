@@ -5,9 +5,13 @@ export default createStore({
     return {
       userInfo: [],
       textInfo: [],
+      usernumber: 0,
+      keywordnumber: 0,
       keywordInfo: [],
       keywordTextInfo: [],
+      weibonumber: 0, // 今日微博数量
       retransmissionData: [], // 保存 retransmission 数据
+      classifycount: 0, // 分类数量
       searchKeyword: "", // 搜索关键字
       userPortrait: {}, // 用户画像数据
       count: {
@@ -32,6 +36,24 @@ export default createStore({
     setTextInfo(state, textInfo) {
       state.textInfo = textInfo;
     },
+    setNumber(state, weibonumber) {
+      state.weibonumber = weibonumber
+    },
+    updateNubmer(state, weibonumber) {
+      state.weibonumber += weibonumber
+    },
+    setkeywordnumber(state, keywordnumber) {
+      state.keywordnumber = keywordnumber
+    },
+    updatekeywordnumber(state, keywordnumber) {
+      state.keywordnumber += keywordnumber
+    },
+    setusernumber(state, usernumber) {
+      state.usernumber = usernumber
+    },
+    updateusernumber(state, usernumber) {
+      state.usernumber += usernumber
+    },
     updateTextInfo(state, { index, value }) {
       state.textInfo[index] = value;
     },
@@ -40,6 +62,21 @@ export default createStore({
     },
     clearTextInfo(state) {
       state.textInfo = [];
+    },
+    clearNumber(state) {
+      state.weibonumber = 0;
+    },
+
+
+    //classify相关
+    setClassifyCount(state, number) {
+      state.classifycount = number;
+    },
+    addClassifyCount(state) {
+      state.classifycount += 1;
+    },
+    upadateclassifycount(state, number) {
+      state.classifycount += number;
     },
 
     // KeywordInfo related mutations
@@ -64,7 +101,7 @@ export default createStore({
     setUserPortrait(state, userPortrait) {
       state.userPortrait = userPortrait; // 新增
     },
-    // RetransmissionData related mutations
+    // Retransmission相关
     setRetransmissionData(state, retransmissionData) {
       state.retransmissionData = retransmissionData; // 覆盖现有数据
     },
